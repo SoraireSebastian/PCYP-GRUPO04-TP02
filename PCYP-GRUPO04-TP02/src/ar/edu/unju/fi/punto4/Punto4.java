@@ -7,7 +7,7 @@ import java.io.FileReader;
 public class Punto4 {
 
 	public static void main(String[] args) {
-        String rutaArchivo = "C:\\Users\\ricky\\Downloads\\TP01Frase.txt"; // Cambia esta ruta si es necesario
+        String rutaArchivo = "C:\\Users\\ricky\\Downloads\\TP01Frase.txt"; 
 
         try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivo))) {
             String linea;
@@ -25,13 +25,13 @@ public class Punto4 {
                 longitudLinea = linea.length();
                 totalLineas++;
 
-                if (longitudLinea < 50) { // Definir el umbral para líneas cortas
+                if (longitudLinea < 50) { 
                     lineasCortas++;
                 } else {
                     lineasLargas++;
                 }
 
-                // Determinar la línea más corta y la más larga
+                
                 if (longitudLinea < longitudMasCorta) {
                     longitudMasCorta = longitudLinea;
                     lineaMasCorta = linea;
@@ -42,8 +42,6 @@ public class Punto4 {
                     lineaMasLarga = linea;
                 }
             }
-
-           
             System.out.println("Número de líneas cortas: " + lineasCortas);
             System.out.println("Número de líneas largas: " + lineasLargas);
             System.out.println("Línea más corta (" + longitudMasCorta + " caracteres):");
